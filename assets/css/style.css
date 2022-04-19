@@ -669,8 +669,14 @@ select {
   padding-inline: 0.25rem;
 }
 
+.col:nth-child(1) {
+  background-color: var(--container-color);
+}
+
 .table-hr {
   padding: 0.75rem 0.25rem;
+  color: var(--text-color-light);
+  font-weight: var(--font-bold);
 }
 
 .table-item--right {
