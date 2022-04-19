@@ -1,0 +1,779 @@
+/* ------ GOOGLE FONT ------ */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+/* ------ CSS VARIABLES ------ */
+:root {
+  --header-height: 3.5rem;
+
+  /* Colors */
+  --first-color: #080a20;
+  --first-color-alt: #eee;
+  --title-color: #1a1a1a;
+  --text-color: #333;
+  --text-color-light: #666;
+  --white-color: #fff;
+  --black-color: #000;
+  --container-color: #f5f5f5;
+  --light-background: #cccccc;
+  --button-color: #004293;
+
+  /* Font & Typography */
+  --body-font: "Open Sans", sans-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /* Font weights */
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /* Z index */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/* Responsive Typography */
+@media screen and (min-width: 968px) {
+  :root {
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/* ------ BASE ------ */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  margin-top: var(--header-height);
+
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+span {
+  display: block;
+}
+
+select {
+  padding: 0.5rem 0.5rem;
+  border: none;
+  background-color: var(--white-color);
+  border-radius: 0.5rem;
+  color: var(--black-color);
+  font-weight: var(--font-semi-bold);
+}
+
+/* ------ REUSABLE CSS CLASSES ------ */
+.container {
+  max-width: 1024px;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--4-columns {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1.5fr 1fr;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+.section__title {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+/* ------ HEADER & NAV ------ */
+.header {
+  background-color: var(--black-color);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+}
+
+.nav {
+  height: var(--header-height);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo,
+.nav__toggle {
+  font-size: 1.25rem;
+  color: #f0f8ff;
+
+  cursor: pointer;
+}
+
+.nav__logo {
+  gap: 0.5rem;
+
+  display: flex;
+  align-items: center;
+
+  font-weight: var(--font-medium);
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: var(--z-fixed);
+    backdrop-filter: blur(100px);
+    transition: 0.3s;
+  }
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 2.5rem;
+  padding-top: 6rem;
+  margin-bottom: 2.5rem;
+}
+
+.nav__link {
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--text-color);
+}
+
+.nav__link:hover {
+  color: var(--text-color-light);
+}
+
+.nav__btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.75rem 1.25rem;
+  font-weight: var(--font-semi-bold);
+
+  border-radius: 0.5rem;
+}
+/* In case you want to differenciate between button i have attached: primary__btn and secondary__btn classes */
+.primary__btn {
+  color: var(--white-color);
+  background-color: var(--button-color);
+  margin-bottom: 1rem;
+}
+
+.secondary__btn {
+  color: var(--button-color);
+}
+
+.nav__close {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  color: var(--text-color);
+}
+
+.nav__close:hover {
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+/* Show Menu */
+.show-menu {
+  right: 0;
+}
+
+/* ------ HOME ------ */
+.home {
+  height: calc(100vh - var(--header-height));
+  background-image: linear-gradient(180deg, var(--text-color), #111);
+
+  position: relative;
+}
+
+.home__container {
+  text-align: center;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+.home__title {
+  font-size: 2.5rem;
+  font-weight: var(--font-bold);
+  line-height: 1.2;
+  color: var(--white-color);
+  margin-bottom: 2.5rem;
+}
+
+.home__tag {
+  margin-bottom: 0.75rem;
+  color: var(--text-color-light);
+}
+
+.home__amount {
+  color: var(--white-color);
+  font-weight: var(--font-semi-bold);
+  font-size: var(--h2-font-size);
+}
+
+/* ------ FEATURED ------ */
+.featured {
+  background-color: var(--first-color);
+  padding-top: 1.5rem;
+}
+
+.featured__title {
+  text-transform: uppercase;
+  font-weight: var(--font-bold);
+  color: var(--white-color);
+}
+
+.featured__logos {
+  display: flex;
+  flex-direction: column;
+  background-color: #004293;
+}
+
+.logo {
+  filter: brightness(0);
+}
+
+/* ------ ABOUT ------ */
+.about {
+  background-color: var(--container-color);
+  padding: 4rem 0;
+  color: var(--black-color);
+}
+
+.about__subtitle {
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: var(--font-medium);
+
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.about__title {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: var(--font-semi-bold);
+
+  margin-bottom: 3rem;
+}
+
+.about__description {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: var(--text-color-light);
+  font-weight: var(--font-medium);
+}
+
+/* ------ TRANSFER ------ */
+.transfer {
+  background-color: var(--container-color);
+}
+
+.transfer__title {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-bold);
+  margin-bottom: 1rem;
+}
+
+.transfer__subtitle {
+  font-size: 1.15rem;
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 2rem;
+}
+
+.transfer__description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--text-color-light);
+  font-weight: var(--font-medium);
+  margin-bottom: 2rem;
+}
+
+.transfer__img {
+  border-radius: 0.5rem;
+  justify-self: center;
+
+  margin-bottom: 2.5rem;
+}
+
+/* Transfer Card */
+.transfer__card {
+  background-color: var(--white-color);
+  padding: 1rem;
+  border-radius: 0.75rem;
+}
+
+.transfer__card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 1.5rem;
+}
+
+.transfer__card-title {
+  font-weight: var(--font-semi-bold);
+}
+
+.transfer__icon {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.transfer__row {
+  color: var(--text-color);
+  font-weight: var(--font-medium);
+
+  position: relative;
+}
+
+.transfer__operation {
+  width: 100%;
+  text-align: center;
+}
+
+.transfer__operation i {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.transfer__row label {
+  margin-left: 0.25rem;
+  font-weight: bold;
+}
+
+.transfer__row-data {
+  background-color: var(--container-color);
+  display: flex;
+  justify-content: space-between;
+
+  padding: 1rem;
+  border-radius: 0.75rem;
+
+  border: 1px solid #eee;
+  margin-bottom: 2rem;
+}
+
+.row__title {
+  color: var(--text-color-light);
+  margin-bottom: 0.5rem;
+}
+
+.select__currency {
+  background-color: transparent;
+  font-size: 1.2rem;
+}
+
+.transfer__limit {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+}
+
+.transfer__labels {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 0.5rem;
+}
+
+.de-emphasized {
+  color: var(--text-color-light);
+  opacity: 0.4;
+}
+
+.transfer__input {
+  background: none;
+  border: none;
+  width: 100%;
+  padding: 0.15rem;
+  outline: none;
+}
+
+.max {
+  padding: 0.15rem;
+  text-transform: uppercase;
+  background-color: white;
+  border-radius: 0.5rem;
+}
+
+.info {
+  padding: 0.25rem 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+
+  font-size: 1rem;
+  font-weight: var(--font-semi-bold);
+}
+
+.transfer__action {
+  text-align: center;
+}
+
+.black--btn {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.75rem;
+
+  background-color: var(--black-color);
+  color: aliceblue;
+
+  font-size: 1.2rem;
+  font-weight: var(--font-semi-bold);
+
+  cursor: pointer;
+}
+
+/* ------ ASSETS ------ */
+.assets {
+  background-color: var(--container-color);
+  padding: 4rem 0;
+}
+
+.assets__title {
+  font-size: 2.5rem;
+  letter-spacing: -1.5px;
+  line-height: 1.2;
+  font-weight: var(--font-semi-bold);
+
+  margin-bottom: 1.5rem;
+}
+
+.assets__description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--text-color-light);
+  font-weight: var(--font-medium);
+  margin-bottom: 3rem;
+}
+
+.assets__tabs-container {
+  display: flex;
+  gap: 1.5rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.primary__tab,
+.secondary__tab {
+  font-weight: var(--font-bold);
+}
+
+.secondary__tab {
+  color: var(--text-color-light);
+  opacity: 0.4;
+}
+
+.primary__tab {
+  text-decoration: underline;
+}
+
+/* assets pools */
+.assets__pools {
+  margin-bottom: 2.5rem;
+}
+.assets__pool {
+  padding: 1rem 0.75rem;
+  background-color: var(--white-color);
+  border-radius: 0.75rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-color-light);
+  font-weight: var(--font-medium);
+
+  margin-bottom: 1rem;
+}
+
+.row:not(:nth-child(2)) {
+  margin-bottom: 0;
+}
+
+.T-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color);
+  font-size: 1.2rem;
+  font-weight: var(--font-semi-bold);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #37b24d;
+  margin-bottom: 5px;
+}
+
+.token__name {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #eee;
+  margin-bottom: 5px;
+}
+
+.token__role,
+.token__status {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: black;
+  font-weight: var(--font-semi-bold);
+}
+
+.balance,
+.value {
+  color: var(--black-color);
+  font-weight: var(--font-semi-bold);
+  font-size: 1.3rem;
+}
+
+.description,
+.liquidity {
+  text-align: right;
+}
+
+/* Pool filters */
+.assets__filter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  margin-bottom: 0.5rem;
+}
+
+.filter__name {
+  font-weight: var(--font-semi-bold);
+}
+
+/* ------ All Pools ------ */
+.all__pools-container {
+  width: 100%;
+  background-color: var(--white-color);
+  border-radius: 0.75rem;
+
+  align-items: center;
+  gap: 1rem;
+}
+
+.col {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--container-color);
+  padding-inline: 0.25rem;
+}
+
+.table-hr {
+  padding: 0.75rem 0.25rem;
+}
+
+.table-item--right {
+  text-align: center;
+}
+
+/* ------ CRYPTO ------ */
+.crypto {
+  background-color: var(--first-color);
+  padding: 4rem 0;
+}
+
+.rows {
+  row-gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.crypto__card {
+  background-color: #212336;
+  border-radius: 0.75rem;
+  padding: 1rem;
+
+  row-gap: 1rem;
+}
+
+.crypto__data {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.crypto__svg-card {
+  height: 60px;
+  width: 60px;
+}
+
+.crypto__title {
+  color: var(--white-color);
+  font-size: 1.3rem;
+}
+
+.highlighted {
+  display: inline-block;
+  padding: 0.25rem 0.35rem;
+  background-color: #37b24d;
+  border-radius: 0.25rem;
+
+  color: var(--white-color);
+  text-transform: uppercase;
+  font-size: var(--normal-font-size);
+  transform: translateY(-7px);
+}
+
+.crypto__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.crypto__logos {
+  display: flex;
+}
+
+.crypto__logo {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.btn--blue {
+  font-weight: var(--font-bold);
+
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  background-color: var(--button-color);
+  color: var(--white-color);
+}
+
+.crypto__icon {
+  font-size: 1.5rem;
+}
+
+.cryptos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+/* ------ FOOTER ------ */
+.footer {
+  overflow: hidden;
+  padding: 4rem 0;
+}
+
+.footer__container {
+  row-gap: 2rem;
+}
+
+.footer__logo {
+  font-weight: var(--font-semi-bold);
+  font-size: 1.25rem;
+  color: #000;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: 0.5rem;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.75rem;
+}
+
+.footer__link {
+  color: var(--text-color-light);
+  font-weight: var(--font-medium);
+  transition: 0.3s;
+}
+
+.footer__link:hover {
+  color: var(--title-color);
+}

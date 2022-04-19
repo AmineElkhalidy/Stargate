@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ------ FAVICON ------ -->
+    <link
+      rel="shortcut icon"
+      href="./assets/img/svg/star.svg"
+      type="image/x-icon"
+    />
+
+    <!-- ------ REMIX ICON PACK ------ -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- ------ LINKING CSS FILE ------ -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <title>Stargate</title>
+
+    <script src="https://unpkg.com/phosphor-icons"></script>
+  </head>
+  <body>
+    <!-- ------ HEADER ------ -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">
+          <i class="ph-star-four"></i> Stargate
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Transfer</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#" class="nav__link">Pool</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#" class="nav__link">Farming</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#" class="nav__link">Stake</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#" class="nav__link">Products</a>
+            </li>
+          </ul>
+
+          <div class="nav__btns">
+            <div>
+              <button class="btn primary__btn">Claim Rewards</button>
+            </div>
+
+            <div>
+              <button class="btn secondary__btn">Claim Rewards</button>
+            </div>
+          </div>
+
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-line"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ------ MAIN ------ -->
+    <main class="main">
+      <!-- ------ HOME ------ -->
+      <section class="home section">
+        <div class="home__container container">
+          <h2 class="home__title">Welcome to the omnichain future</h2>
+
+          <p class="home__tag">Total Value Locked</p>
+          <h3 class="home__amount">$2,573,476,493.94</h3>
+        </div>
+      </section>
+
+      <!-- ------ FEATURED ------ -->
+      <section class="featured">
+        <div class="featured__container container">
+          <h2 class="section__title featured__title">As featured on</h2>
+
+          <!-- <div class="featured__logos grid">
+            <img src="./assets/img/yahoo.png" alt="Yahoo image" class="logo" />
+            <img
+              src="./assets/img/bloomberg.png"
+              alt="Bloomberg image"
+              class="logo"
+            />
+            <img
+              src="./assets/img/nasdaq.png"
+              alt="Nasdaq image"
+              class="logo"
+            />
+            <img
+              src="./assets/img/techbullion.png"
+              alt="Techbullion image"
+              class="logo"
+            />
+          </div> -->
+        </div>
+      </section>
+
+      <!-- ------ ABOUT ------ -->
+      <section class="about section">
+        <div class="about__container container">
+          <div class="about__data">
+            <span class="about__subtitle">About Stargate</span>
+            <h2 class="about__title">
+              Stargate is a fully composable liquidity transport protocol that
+              lives at the heart of Omichain DeFi
+            </h2>
+
+            <p class="about__description">
+              With stargate, users & dApps can transfer native assets
+              cross-chain while accessing the protocol's unified liquidity pools
+              with instant guaranteed finality. The universe is infinite with
+              Stargate
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------ TRANSFER ------ -->
+      <section class="transfer">
+        <div class="transfer__container container grid">
+          <div class="transfer__data">
+            <span class="transfer__line"></span>
+            <h2 class="transfer__title">Transfer</h2>
+            <h3 class="transfer__subtitle">
+              Swap 1:1 native assets cross-chain, accessing Stargate's unified
+              liquidity pools.
+            </h3>
+            <p class="transfer__description">
+              Stargate transfers have instant guaranteed finality; a transfer
+              submitted on the source chain is guaranteed on the destination.
+            </p>
+          </div>
+
+          <img
+            src="./assets/img/crypto.webp"
+            alt="Crypto currencies"
+            class="transfer__img"
+          />
+
+          <div class="transfer__card">
+            <div class="transfer__card-header">
+              <h2 class="transfer__card-title">Transfer</h2>
+              <i class="ri-equalizer-line transfer__icon"></i>
+            </div>
+
+            <div class="transfer__card-cryptos">
+              <div class="transfer__row">
+                <label>From</label>
+                <div class="transfer__row-data">
+                  <div class="transfer__row-main">
+                    <span class="row__title">Token</span>
+                    <select class="select__currency" name="token" id="token">
+                      <option value="USDT">USDT</option>
+                    </select>
+                  </div>
+
+                  <div class="transfer__row-sec">
+                    <span class="row__title">Network</span>
+                    <select class="select__currency" name="token" id="token">
+                      <option value="USDT">BNB</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="transfer__operation">
+                <i class="ri-refresh-line"></i>
+              </div>
+
+              <div class="transfer__row">
+                <label>To</label>
+                <div class="transfer__row-data">
+                  <div class="transfer__row-main">
+                    <span class="row__title">Token</span>
+                    <select class="select__currency" name="token" id="token">
+                      <option value="USDT">USDT</option>
+                    </select>
+                  </div>
+
+                  <div class="transfer__row-sec">
+                    <span class="row__title">Network</span>
+                    <select class="select__currency" name="token" id="token">
+                      <option value="USDT">BNB</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="transfer__row">
+                <label>Total Amount</label>
+                <div class="transfer__row-data">
+                  <input class="transfer__input" type="number" />
+                  <span class="max">max</span>
+                </div>
+                <span class="transfer__limit"
+                  >Transfer limit: 8,298,368.57</span
+                >
+              </div>
+
+              <div class="transfer__row">
+                <div class="transfer__labels">
+                  <label class="de-emphasized">You will receive</label>
+                  <label>1.99 USDT</label>
+                </div>
+
+                <div class="transfer__row-data">
+                  <input
+                    class="transfer__input"
+                    type="number"
+                    placeholder="Fee"
+                  />
+                  <span class="info"
+                    >$0.00<i class="ri-information-line info__icon"></i
+                  ></span>
+                </div>
+              </div>
+
+              <div class="transfer__action">
+                <button class="black--btn">Connect Wallet</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------ ASSETS ------ -->
+      <section class="assets">
+        <div class="assets__container container">
+          <h2 class="assets__title">
+            Connect your wallet to see assets available to stake
+          </h2>
+          <p class="assets__description">
+            Add liquidity to Stargate's omnichain protocol and earn stablecoin
+            rewards on every Stargate transfer. Liquidity providers can also
+            farm their LP tokens to receive STG token rewards.
+          </p>
+
+          <div class="assets__pools">
+            <div class="assets__tabs-container">
+              <h3 class="secondary__tab">Your Pools</h3>
+              <h3 class="primary__tab">Top Pools</h3>
+            </div>
+
+            <div class="assets__pools-container grid">
+              <div class="assets__pool">
+                <div class="row">
+                  <div class="row__token">
+                    <span class="T-letter">T</span>
+                    <span class="description">Token</span>
+                  </div>
+
+                  <div class="row__token">
+                    <span class="token__name">Arbitrum</span>
+                    <span class="description">24h Fees</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="token__role">usdt</span>
+                  <span class="token__status">new</span>
+                </div>
+                <div class="row">
+                  <div class="wallet__balance-row">
+                    <span class="wallet__balance">Wallet Balance</span>
+                    <span class="balance">-</span>
+                  </div>
+
+                  <div class="liquidity__row">
+                    <span class="liquidity">Liquidity</span>
+                    <span class="value">$143.8M</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="assets__pools">
+            <div class="assets__tabs-container">
+              <h3 class="primary__tab">All Pools</h3>
+              <h3 class="secondary__tab">Your Pools</h3>
+              <h3 class="secondary__tab">TVL: $2,573,471,086.06</h3>
+            </div>
+
+            <div class="assets__filters-container">
+              <div class="assets__filter">
+                <label for="token" class="filter__name">Token</label>
+                <select name="token" id="token">
+                  <option value="All Tokens" selected>All Tokens</option>
+                </select>
+              </div>
+
+              <div class="assets__filter">
+                <label for="chains" class="filter__name">Network</label>
+                <select name="chains" id="chains">
+                  <option value="All Tokens" selected>All Chains</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="all__pools-container grid">
+            <div class="col grid--4-columns">
+              <h3 class="table-hr">Name</h3>
+              <h3 class="table-hr">Network</h3>
+              <h3 class="table-hr">Liquidity</h3>
+              <h3 class="table-hr">24h F</h3>
+            </div>
+
+            <div class="col grid--4-columns">
+              <h3 class="table-item">USDC</h3>
+              <h3 class="table-item">Ethereum</h3>
+              <h3 class="table-item">$400</h3>
+              <h3 class="table-item table-item--right">NEW</h3>
+            </div>
+
+            <div class="col grid--4-columns">
+              <h3 class="table-item">USDC</h3>
+              <h3 class="table-item">Avalanche</h3>
+              <h3 class="table-item">$400</h3>
+              <h3 class="table-item table-item--right">NEW</h3>
+            </div>
+
+            <div class="col grid--4-columns">
+              <h3 class="table-item">BUSD</h3>
+              <h3 class="table-item">BNB</h3>
+              <h3 class="table-item">$400</h3>
+              <h3 class="table-item table-item--right">NEW</h3>
+            </div>
+
+            <div class="col grid--4-columns">
+              <h3 class="table-item">USDT</h3>
+              <h3 class="table-item">BNB</h3>
+              <h3 class="table-item">$400</h3>
+              <h3 class="table-item table-item--right">NEW</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------ BUY Cryptos ------ -->
+      <section class="crypto">
+        <div class="crypto__container container">
+          <div class="rows grid">
+            <div class="crypto__card grid">
+              <div class="crypto__data">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  fill="#000000"
+                  viewBox="0 0 256 256"
+                  class="crypto__svg-icon"
+                >
+                  <rect width="256" height="256" fill="none"></rect>
+                  <line
+                    x1="128"
+                    y1="16"
+                    x2="128"
+                    y2="240"
+                    fill="none"
+                    stroke="#000000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></line>
+                  <polyline
+                    points="216 128 128 168 40 128"
+                    fill="none"
+                    stroke="#000000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></polyline>
+                  <polygon
+                    points="128 16 216 128 128 240 40 128 128 16"
+                    fill="none"
+                    stroke="#000000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></polygon>
+                </svg>
+
+                <h3 class="crypto__title">
+                  <span class="highlighted">Live</span> Ethereum Mainnet
+                </h3>
+              </div>
+
+              <div class="crypto__actions">
+                <div class="crypto__logos">
+                  <div class="crypto__logo"></div>
+                  <div class="crypto__logo"></div>
+                  <div class="crypto__logo"></div>
+                </div>
+
+                <div class="crypto__action">
+                  <button class="btn btn--blue">
+                    Buy on <i class="ph-horse crypto__icon"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="crypto__card grid">
+              <div class="crypto__data">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  fill="#000000"
+                  viewBox="0 0 256 256"
+                  class="crypto__icon-svg"
+                >
+                  <rect width="256" height="256" fill="none"></rect>
+                  <path
+                    d="M80,120h72a40,40,0,0,1,0,80H80V48h60a36,36,0,0,1,0,72"
+                    fill="none"
+                    stroke="#000000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></path>
+                  <line
+                    x1="64"
+                    y1="48"
+                    x2="80"
+                    y2="48"
+                    fill="none"
+                    stroke="#000000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></line>
+                  <line
+                    x1="64"
+                    y1="200"
+                    x2="80"
+                    y2="200"
+                    fill="none"
+                    stroke="#000000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></line>
+                  <line
+                    x1="104"
+                    y1="48"
+                    x2="104"
+                    y2="24"
+                    fill="none"
+                    stroke="#000000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></line>
+                  <line
+                    x1="136"
+                    y1="48"
+                    x2="136"
+                    y2="24"
+                    fill="none"
+                    stroke="#000000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></line>
+                  <line
+                    x1="104"
+                    y1="224"
+                    x2="104"
+                    y2="200"
+                    fill="none"
+                    stroke="#000000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></line>
+                  <line
+                    x1="136"
+                    y1="224"
+                    x2="136"
+                    y2="200"
+                    fill="none"
+                    stroke="#000000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="16"
+                  ></line>
+                </svg>
+
+                <h3 class="crypto__title">
+                  <span class="highlighted">Live</span> Binance Smart Chain
+                </h3>
+              </div>
+
+              <div class="crypto__actions">
+                <div class="crypto__logos">
+                  <div class="crypto__logo"></div>
+                  <div class="crypto__logo"></div>
+                  <div class="crypto__logo"></div>
+                </div>
+
+                <div class="crypto__action">
+                  <button class="btn btn--blue">
+                    Buy on <i class="ph-hand-grabbing crypto__icon"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cryptos">
+            <div class="crypto__logo"></div>
+            <div class="crypto__logo"></div>
+            <div class="crypto__logo"></div>
+            <div class="crypto__logo"></div>
+            <div class="crypto__logo"></div>
+            <div class="crypto__logo"></div>
+            <div class="crypto__logo"></div>
+            <div class="crypto__logo"></div>
+            <div class="crypto__logo"></div>
+            <div class="crypto__logo"></div>
+            <div class="crypto__logo"></div>
+            <div class="crypto__logo"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ------ FOOTER ------ -->
+    <footer class="footer">
+      <div class="footer__container container grid">
+        <div>
+          <a href="#" class="footer__logo"
+            ><i class="ph-star-four"></i> Stargate</a
+          >
+
+          <div class="footer__description">Your transport protocol</div>
+        </div>
+
+        <div>
+          <h3 class="footer__title">Protocol</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="#" class="footer__link">Documentation</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Transfer Gas Estimator</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__title">Community</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="#" class="footer__link">Discord</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Telegram</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Medium</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Twitter</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="footer__title">Resources</h3>
+          <ul class="footer__links">
+            <li>
+              <a href="#" class="footer__link">Terms of Use</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Cookie Policy</a>
+            </li>
+            <li>
+              <a href="#" class="footer__link">Media Kit</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ------ MAIN JS ------ -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
