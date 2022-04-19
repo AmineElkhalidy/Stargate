@@ -28,7 +28,7 @@
   <body>
     <!-- ------ HEADER ------ -->
     <header class="header" id="header">
-      <nav class="nav container">
+      <nav class="nav extend container">
         <a href="#" class="nav__logo">
           <i class="ph-star-four"></i> Stargate
         </a>
@@ -92,9 +92,9 @@
       <!-- ------ FEATURED ------ -->
       <section class="featured">
         <div class="featured__container container">
-          <h2 class="section__title featured__title">As featured on</h2>
+          <h2 class="featured__title">As featured on</h2>
 
-          <!-- <div class="featured__logos grid">
+          <div class="featured__logos">
             <img src="./assets/img/yahoo.png" alt="Yahoo image" class="logo" />
             <img
               src="./assets/img/bloomberg.png"
@@ -111,7 +111,7 @@
               alt="Techbullion image"
               class="logo"
             />
-          </div> -->
+          </div>
         </div>
       </section>
 
@@ -209,7 +209,7 @@
               <div class="transfer__row">
                 <label>Total Amount</label>
                 <div class="transfer__row-data">
-                  <input class="transfer__input" type="number" />
+                  <input class="transfer__input" type="text" />
                   <span class="max">max</span>
                 </div>
                 <span class="transfer__limit"
@@ -217,7 +217,7 @@
                 >
               </div>
 
-              <div class="transfer__row">
+              <div class="transfer__row margin-up">
                 <div class="transfer__labels">
                   <label class="de-emphasized">You will receive</label>
                   <label>1.99 USDT</label>
@@ -290,10 +290,97 @@
                   </div>
                 </div>
               </div>
+
+              <div class="assets__pool">
+                <div class="row">
+                  <div class="row__token">
+                    <span class="T-letter">T</span>
+                    <span class="description">Token</span>
+                  </div>
+
+                  <div class="row__token">
+                    <span class="token__name">Arbitrum</span>
+                    <span class="description">24h Fees</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="token__role">usdt</span>
+                  <span class="token__status">new</span>
+                </div>
+                <div class="row">
+                  <div class="wallet__balance-row">
+                    <span class="wallet__balance">Wallet Balance</span>
+                    <span class="balance">-</span>
+                  </div>
+
+                  <div class="liquidity__row">
+                    <span class="liquidity">Liquidity</span>
+                    <span class="value">$143.8M</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="assets__pool">
+                <div class="row">
+                  <div class="row__token">
+                    <span class="T-letter">T</span>
+                    <span class="description">Token</span>
+                  </div>
+
+                  <div class="row__token">
+                    <span class="token__name">Arbitrum</span>
+                    <span class="description">24h Fees</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="token__role">usdt</span>
+                  <span class="token__status">new</span>
+                </div>
+                <div class="row">
+                  <div class="wallet__balance-row">
+                    <span class="wallet__balance">Wallet Balance</span>
+                    <span class="balance">-</span>
+                  </div>
+
+                  <div class="liquidity__row">
+                    <span class="liquidity">Liquidity</span>
+                    <span class="value">$143.8M</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="assets__pool">
+                <div class="row">
+                  <div class="row__token">
+                    <span class="T-letter">T</span>
+                    <span class="description">Token</span>
+                  </div>
+
+                  <div class="row__token">
+                    <span class="token__name">Arbitrum</span>
+                    <span class="description">24h Fees</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="token__role">usdt</span>
+                  <span class="token__status">new</span>
+                </div>
+                <div class="row">
+                  <div class="wallet__balance-row">
+                    <span class="wallet__balance">Wallet Balance</span>
+                    <span class="balance">-</span>
+                  </div>
+
+                  <div class="liquidity__row">
+                    <span class="liquidity">Liquidity</span>
+                    <span class="value">$143.8M</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="assets__pools">
+          <div class="assets__pools assets__pools-second">
             <div class="assets__tabs-container">
               <h3 class="primary__tab">All Pools</h3>
               <h3 class="secondary__tab">Your Pools</h3>
@@ -322,7 +409,7 @@
               <h3 class="table-hr">Name</h3>
               <h3 class="table-hr">Network</h3>
               <h3 class="table-hr">Liquidity</h3>
-              <h3 class="table-hr">24h F</h3>
+              <h3 class="table-hr">24h Fees</h3>
             </div>
 
             <div class="col grid--4-columns">
@@ -549,13 +636,13 @@
     <!-- ------ FOOTER ------ -->
     <footer class="footer">
       <div class="footer__container container grid">
-        <div>
+        <!-- <div>
           <a href="#" class="footer__logo"
             ><i class="ph-star-four"></i> Stargate</a
           >
 
           <div class="footer__description">Your transport protocol</div>
-        </div>
+        </div> -->
 
         <div>
           <h3 class="footer__title">Protocol</h3>
